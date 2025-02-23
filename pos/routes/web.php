@@ -14,10 +14,12 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
+// Nomor 1
 Route::get('/', function () {
     return view('home');
 });
 
+// Nomor 2
 Route::prefix('category')->group(function () {
     Route::get('/food-beverage', [CategoryController::class, 'foodBeverage']);
     Route::get('/beauty-health', [CategoryController::class, 'beautyHealth']);
@@ -25,10 +27,12 @@ Route::prefix('category')->group(function () {
     Route::get('/baby-kid', [CategoryController::class, 'babyKid']);
 });
 
+// Nomor 3
 Route::get('/user/{id}/name/{name}', function ($id, $name) {
     return 'Nama user: ' . $name . ', dengan ID: ' . $id;
 });
 
+// Nomor 4
 Route::get('/sales', function () {
     return view('sales');
 });
