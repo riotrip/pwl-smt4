@@ -121,3 +121,13 @@ Route::resource('photos', PhotoController::class);
 //     'update',
 //     'destroy'
 // ]);
+
+// Route::get('/greeting', function () {
+//     return view('hello', ['name' => 'Rio']);
+// });
+
+// Route::get('/greeting', function () {
+//     return view('blog.hello', ['name' => 'Rio']);
+// });
+
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
